@@ -36,8 +36,9 @@ Do {
 			If (!$Result) {
 				"Device removed successfully." | Write-Host
 			} Else {
-				"Sorry, an error occured." | Write-Host}
+				("Sorry, an error occured. Return was: {0}" -f $Result) | Write-Host
 			}
+		}
 	} Else {
 		"`n********* No devices found ********" | Write-Host
 	}
